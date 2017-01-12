@@ -852,6 +852,19 @@ ApiGlobe.prototype.removeEventListenerLayerChanged = function removeEventListene
     this.viewerDiv.removeEventListener('layerchanged:index', this.callbackLayerChanged, false);
 };
 
+ApiGlobe.prototype.getLayers = function getLayers() {
+    const cl = this.scene.getMap().layersConfiguration.getColorLayers();
+    const el = this.scene.getMap().layersConfiguration.getElevationLayers();
+    const layers = [];
+    for (const i in cl) {
+        layers.push(cl[i]);
+    }
+    for (const j in el) {
+        layers.push(cl[j]);
+    }
+    return layers;
+};
+
 ApiGlobe.prototype.launchCommandApi = function launchCommandApi() {
 
     // this.removeImageryLayer('ScanEX');
