@@ -579,7 +579,6 @@ ApiGlobe.prototype.pickPosition = function pickPosition(mouse, y) {
         } }
 
     var pickedPosition = this.scene.getPickPosition(mouse);
-    this.scene.renderScene3D();
 
     if (pickedPosition) {
         return this.projection.cartesianToGeo(pickedPosition);
