@@ -32,7 +32,8 @@
     "three": "^0.83.0",
     "whatwg-fetch": "^1.0.0",
     "custom-event": "^1.0.0",
-    "earcut":"^2.1.1"
+    "earcut":"^2.1.1",
+    "togeojson":"^0.14.2"
   },
   "devDependencies": {
     "babel-cli": "^6.11.4",
