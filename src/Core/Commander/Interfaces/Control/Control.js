@@ -1,20 +1,15 @@
 /**
  * Generated On: 2016-11-22
  * Class: Controls
- * Description: Cette Classe construit un control.
+ * Description: Create an event.
  */
-
-import ApiGlobe from 'Core/Commander/Interfaces/ApiInterface/ApiGlobe';
 
 function Control(pName, pElement, options) {
     this.pName = pName;
     this.pElement = pElement;
     this.options = options;
-    this.map_ = null;
-    this.api = ApiGlobe;
+    this._map = null;
 }
-
-Control.prototype.constructor = Control;
 
 /**
  * Return the name of the control.
@@ -43,7 +38,7 @@ Control.prototype.getElement = function getElement() {
  */
 
 Control.prototype.getOptions = function getOptions() {
-    this.options = this.options || '';
+    this.options = this.options || {};
     return this.options;
 };
 
@@ -70,18 +65,18 @@ Control.prototype.listenToMap = function listenToMap(pEventName, pCallback) {
     document.getElementById('viewerDiv').addEventListener(pEventName, pCallback, false);
 };
 
-Control.prototype.getGlobe = function getGlobe() {
-    return this.map_;
+Control.prototype.getMap = function getMap() {
+    return this._map;
 };
 
-Control.prototype.setGlobe = function setGlobe(map) {
-    if (this.map_) {
-        document.getElementById(this.options.div.id).removeChild(this.pElement);
+Control.prototype.setMap = function setMap(map) {
+    if (this._map) {
+        this.options.div.removeChild(this.pElement);
     }
-    this.map_ = map;
-    if (this.map_) {
+    this._map = map;
+    if (this._map) {
         var element = this.pElement;
-        document.getElementById(this.options.div.id).appendChild(element);
+        this.options.div.appendChild(element);
     }
 };
 

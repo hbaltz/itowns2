@@ -36,10 +36,11 @@ and open the template in the editor.
 
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <script src="https://cdnjs.cloudflare.com/ajax/libs/dat-gui/0.6.1/dat.gui.min.js"></script>
+        <link rel="stylesheet" href="examples/controls/controls.css">
     </head>
     <body>
         <div id="viewerDiv">
-            <div id="controlDiv"></div>
+            <div id="controls"></div>
         </div>
 
         <script src="examples/GUI/GuiTools.js"></script>
@@ -84,7 +85,10 @@ and open the template in the editor.
 
            	itowns.viewer.addEventListener('globe-loaded', function() {
             	console.log("Globe Loaded");
+
         	});
         </script>
+        <script src="examples/controls/pickPositionControl.js"></script>
+        <script src="examples/controls/rangeControl.js"></script>
     </body>
 </html>
