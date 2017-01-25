@@ -5,9 +5,7 @@
     "options": {
     	"ipr": {
     		"name":"CARTO",
-    		"url": "https://carto.com/",
-    		"logo":"",
-    		"description":""
+    		"url": "https://carto.com/"
     	},
         "tileMatrixSet": "PM",
         "mimetype": "image/png"

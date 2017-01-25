@@ -10,9 +10,7 @@
 	"options": {
 		"ipr" : {
 			"name":"IGN",
-			"url":"http://www.ign.fr/",
-			"description": "",
-			"logo":""
+			"url":"http://www.ign.fr/"
 		},
 		"name": "GEOGRAPHICALGRIDSYSTEMS.MAPS.SCAN-EXPRESS.STANDARD",
 		"mimetype": "image/jpeg",

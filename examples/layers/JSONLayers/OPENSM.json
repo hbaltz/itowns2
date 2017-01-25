@@ -6,9 +6,7 @@
     "options": {
     	"ipr" : {
 			"name":"OpenStreetMap",
-			"url":"http://www.openstreetmap.org/",
-			"description": "",
-			"logo":""
+			"url":"http://www.openstreetmap.org/"
 		},
 		"tileMatrixSet": "PM",
 		"mimetype": "image/png"
