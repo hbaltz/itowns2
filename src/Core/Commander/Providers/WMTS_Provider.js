@@ -118,7 +118,7 @@ WMTS_Provider.prototype.getXbilTexture = function getXbilTexture(tile, layer, pa
 
         cooWMTS = this.projection.WMTS_WGS84Parent(
             cooWMTS,
-            this.computeLevelToDownload(tile, parameters.ancestor, layer) + levelOffset,
+            this.computeLevelToDownload(tile, layer, parameters.ancestor.level) + levelOffset,
             pitch);
     }
 
@@ -206,6 +206,8 @@ WMTS_Provider.prototype.getColorTexture = function getColorTexture(coWMTS, pitch
     result.texture.minFilter = THREE.LinearFilter;
     result.texture.anisotropy = 16;
 
+    result.texture.coordWMTS = coWMTS;
+
     return promise.then(() => {
         this.cache.addRessource(url, result.texture);
         result.texture.needsUpdate = true;
@@ -233,9 +235,9 @@ WMTS_Provider.prototype.executeCommand = function executeCommand(command) {
 };
 
 
-WMTS_Provider.prototype.computeLevelToDownload = function computeLevelToDownload(tile, ancestor, layer) {
+WMTS_Provider.prototype.computeLevelToDownload = function computeLevelToDownload(tile, layer, ancestorLevel) {
     // Use ancestor's level if valid, else fallback on tile's level
-    var lvl = ancestor ? ancestor.level : tile.level;
+    var lvl = ancestorLevel || tile.level;
 
     return Math.min(
         layer.zoom.max,
@@ -251,29 +253,34 @@ WMTS_Provider.prototype.tileInsideLimit = function tileInsideLimit(tile, layer) 
     return layer.zoom.min <= tile.level;
 };
 
-WMTS_Provider.prototype.getColorTextures = function getColorTextures(tile, layer, parameters) {
+WMTS_Provider.prototype.getColorTextures = function getColorTextures(tile, layer) {
     var promises = [];
     if (tile.material === null) {
         return Promise.resolve();
     }
+
     // Request parent's texture if no texture at all
     if (this.tileInsideLimit(tile, layer)) {
-        var bcoord = tile.matrixSet[layer.options.tileMatrixSet];
+        const bcoord = tile.matrixSet[layer.options.tileMatrixSet];
+        var parentZoom = layer.zoom.min;
 
-        // WARNING the direction textures is important
-        for (var row = bcoord[1].row; row >= bcoord[0].row; row--) {
+        const textures = tile.parent.material.getLayerTextures(layer.id);
+
+        if (textures.length) {
+            parentZoom = textures[0].coordWMTS.zoom;
+        }
+
+        // console.log(label);
+
+        const zoomLayer = tile.material.getColorLayerLevelById(layer.id);
+
+
+        for (let row = bcoord[1].row; row >= bcoord[0].row; row--) {
             var cooWMTS = new CoordWMTS(bcoord[0].zoom, row, bcoord[0].col);
             var pitch = new THREE.Vector3(0.0, 0.0, 1.0);
 
-            if (parameters.ancestor) {
-                // account for possible level offset between coords and tile level
-                // (e.g for PM texture cooWMTS.level = tile.level + 1)
-                var levelOffset = cooWMTS.zoom - tile.level;
-
-                cooWMTS = this.projection.WMTS_WGS84Parent(
-                    cooWMTS,
-                    this.computeLevelToDownload(tile, parameters.ancestor, layer) + levelOffset,
-                    pitch);
+            if (zoomLayer === -1 || parentZoom < zoomLayer) {
+                cooWMTS = this.projection.WMTS_WGS84Parent(cooWMTS, parentZoom, pitch);
             }
 
             promises.push(this.getColorTexture(cooWMTS, pitch, layer));
