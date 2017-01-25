@@ -330,6 +330,18 @@ LayeredMaterial.prototype.getLayerTextureOffset = function getLayerTextureOffset
     return index > -1 ? this.getTextureOffsetByLayerIndex(index) : -1;
 };
 
+LayeredMaterial.prototype.getLayerTextures = function getLayerTextures(layer) {
+    const index = this.indexOfColorLayer(layer);
+
+    if (index !== -1) {
+        const count = this.getTextureCountByLayerIndex(index);
+        const textureIndex = this.getTextureOffsetByLayerIndex(index);
+        return this.textures[l_COLOR].slice(textureIndex, count);
+    } else {
+        return [];
+    }
+};
+
 LayeredMaterial.prototype.setLightingOn = function setLightingOn(enable) {
     this.uniforms.lightingOn.value = enable;
 };
