@@ -12,7 +12,7 @@ function FeatureMesh(params, builder) {
 
 	NodeMesh.call(this);
 
-	this.material = new THREE.MeshBasicMaterial({ color : 0xff0000});
+	this.material = new THREE.MeshBasicMaterial({ color : 0xff0000, side : THREE.DoubleSide});
 
 	this.builder = builder;
 
