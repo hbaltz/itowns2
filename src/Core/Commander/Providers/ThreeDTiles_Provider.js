@@ -144,20 +144,22 @@ ThreeDTiles_Provider.prototype.geojsonToMesh = function(geoJson, ellipsoid, para
 
 ThreeDTiles_Provider.prototype.b3dmToMesh = function(result, ellipsoid, parameters, builder/*, transform*/) {
     var mesh = result.scene.children[0].children[0];    // TODO: multiple geom?
+
+    var child = mesh.children[1];
    
     //mesh.children[0].geometry.scale(1000, 1000, 1000);
 
     var t = (new THREE.Matrix4()).makeBasis(new THREE.Vector3(1,0,0), new THREE.Vector3(0,0,-1), new THREE.Vector3(0,1,0))
 
-    mesh.children[0].geometry.applyMatrix(t.transpose());
-    mesh.children[0].geometry.applyMatrix(parameters.transform);
-    mesh.children[0].geometry.applyMatrix(t.transpose());
+    child.geometry.applyMatrix(t.transpose());
+    child.geometry.applyMatrix(parameters.transform);
+    child.geometry.applyMatrix(t.transpose());
 
     var box;
-    if(mesh.children[0].geometry.boundingBox != null){
+    if(child.geometry.boundingBox != null){
         box = new BoundingBox(mesh.bbox[0], mesh.bbox[2], mesh.bbox[1], mesh.bbox[3], mesh.bbox[4], mesh.bbox[5]);
-    }else if(mesh.children[0].geometry.boundingSphere) {
-        var bs = mesh.children[0].geometry.boundingSphere; 
+    }else if(child.geometry.boundingSphere) {
+        var bs = child.geometry.boundingSphere; 
         var c = bs.center;
         var r = bs.radius / 2;
         box = new BoundingBox(c.x - r, c.x + r, c.y - r, c.y + r, c.z - r, c.z + r);
@@ -165,9 +167,9 @@ ThreeDTiles_Provider.prototype.b3dmToMesh = function(result, ellipsoid, paramete
         var geocoordpivot = new  GeoCoordinate(0.0842259305754219, 0.7988448646506582, 1, UNIT.RADIAN);
         var pivot = ellipsoid.cartographicToCartesian(geocoordpivot);
 
-        mesh.children[0].position.x = pivot.x;
-        mesh.children[0].position.y = pivot.y;
-        mesh.children[0].position.z = pivot.z;
+        child.position.x = pivot.x;
+        child.position.y = pivot.y;
+        child.position.z = pivot.z;
     }
 
     var geocoordpivot = new  GeoCoordinate(0.0842259305754219, 0.7988448646506582, 1, UNIT.RADIAN);
@@ -175,7 +177,7 @@ ThreeDTiles_Provider.prototype.b3dmToMesh = function(result, ellipsoid, paramete
 
 
     var fMesh = new FeatureMesh({bbox: box}, builder);
-    fMesh.setGeometry(mesh.children[0].geometry);
+    fMesh.setGeometry(child.geometry);
 
     fMesh.position.x = pivot.x;
     fMesh.position.y = pivot.y;
