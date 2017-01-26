@@ -145,7 +145,7 @@ ThreeDTiles_Provider.prototype.geojsonToMesh = function(geoJson, ellipsoid, para
 ThreeDTiles_Provider.prototype.b3dmToMesh = function(result, ellipsoid, parameters, builder/*, transform*/) {
     var mesh = result.scene.children[0].children[0];    // TODO: multiple geom?
    
-    //mesh.children[0].geometry.scale(10, 10, 10);
+    //mesh.children[0].geometry.scale(1000, 1000, 1000);
 
     var t = (new THREE.Matrix4()).makeBasis(new THREE.Vector3(1,0,0), new THREE.Vector3(0,0,-1), new THREE.Vector3(0,1,0))
 
@@ -170,10 +170,22 @@ ThreeDTiles_Provider.prototype.b3dmToMesh = function(result, ellipsoid, paramete
         mesh.children[0].position.z = pivot.z;
     }
 
+    var geocoordpivot = new  GeoCoordinate(0.0842259305754219, 0.7988448646506582, 1, UNIT.RADIAN);
+    var pivot = ellipsoid.cartographicToCartesian(geocoordpivot);
+
 
     var fMesh = new FeatureMesh({bbox: box}, builder);
     fMesh.setGeometry(mesh.children[0].geometry);
-    fMesh.material.uniforms.diffuseColor = mesh.children[0].material.uniforms.u_diffuse;
+
+    fMesh.position.x = pivot.x;
+    fMesh.position.y = pivot.y;
+    fMesh.position.z = pivot.z;
+
+    //fMesh.position = mesh.children[0].position;
+
+     console.log(fMesh);
+
+    //fMesh.material.uniforms.diffuseColor = mesh.children[0].material.uniforms.u_diffuse;
 
     return fMesh;
 };

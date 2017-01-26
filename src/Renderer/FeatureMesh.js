@@ -12,7 +12,7 @@ function FeatureMesh(params, builder) {
 
 	NodeMesh.call(this);
 
-	this.material = new FeatureMaterial();
+	this.material = new THREE.MeshBasicMaterial({ color : 0xff0000});
 
 	this.builder = builder;
 
@@ -49,11 +49,11 @@ FeatureMesh.prototype.setGeometry = function(geometry) {
 }
 
 FeatureMesh.prototype.setMatrixRTC = function(rtc) {
-	this.material.setMatrixRTC(rtc);
+	//this.material.setMatrixRTC(rtc);
 }
 
 FeatureMesh.prototype.setFog = function(fog) {
-	this.material.setFogDistance(fog);
+	//this.material.setFogDistance(fog);
 }
 
 FeatureMesh.prototype.setWireframed = function() {
