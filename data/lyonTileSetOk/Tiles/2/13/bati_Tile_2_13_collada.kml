@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<kml:kml xmlns:kml="http://www.opengis.net/kml/2.2">
+  <kml:Document>
+    <kml:name>bati_Tile_2_13_collada</kml:name>
+    <kml:open>false</kml:open>
+    <kml:Placemark>
+      <kml:name>Tile border</kml:name>
+      <kml:LineString>
+        <kml:tessellate>true</kml:tessellate>
+        <kml:coordinates>4.8294626272727275,45.76167272 4.831042690909091,45.76167272 4.831042690909091,45.76272943 4.8294626272727275,45.76272943 4.8294626272727275,45.76167272</kml:coordinates>
+      </kml:LineString>
+    </kml:Placemark>
+  </kml:Document>
+</kml:kml>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<kml:kml xmlns:kml="http://www.opengis.net/kml/2.2">
+  <kml:Document>
+    <kml:name>bati_Tile_10_10_collada</kml:name>
+    <kml:open>false</kml:open>
+    <kml:Placemark>
+      <kml:name>Tile border</kml:name>
+      <kml:LineString>
+        <kml:tessellate>true</kml:tessellate>
+        <kml:coordinates>4.824722436363636,45.770126399999995 4.8263025,45.770126399999995 4.8263025,45.771183109999996 4.824722436363636,45.771183109999996 4.824722436363636,45.770126399999995</kml:coordinates>
+      </kml:LineString>
+    </kml:Placemark>
+    <kml:Placemark id="COLLADA_LYON_1ER_00045">
+      <kml:name>LYON_1ER_00045</kml:name>
+      <kml:Model>
+        <kml:altitudeMode>clampToGround</kml:altitudeMode>
+        <kml:Location>
+          <kml:longitude>4.8259101</kml:longitude>
+          <kml:latitude>45.77057</kml:latitude>
+          <kml:altitude>0.0</kml:altitude>
+        </kml:Location>
+        <kml:Orientation>
+          <kml:heading>1.298286</kml:heading>
+        </kml:Orientation>
+        <kml:Link>
+          <kml:href>292/LYON_1ER_00045.dae</kml:href>
+        </kml:Link>
+      </kml:Model>
+    </kml:Placemark>
+  </kml:Document>
+</kml:kml>

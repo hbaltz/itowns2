@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<kml:kml xmlns:kml="http://www.opengis.net/kml/2.2">
+  <kml:Document>
+    <kml:name>bati_Tile_8_13_collada</kml:name>
+    <kml:open>false</kml:open>
+    <kml:Placemark>
+      <kml:name>Tile border</kml:name>
+      <kml:LineString>
+        <kml:tessellate>true</kml:tessellate>
+        <kml:coordinates>4.8294626272727275,45.76801298 4.831042690909091,45.76801298 4.831042690909091,45.76906969 4.8294626272727275,45.76906969 4.8294626272727275,45.76801298</kml:coordinates>
+      </kml:LineString>
+    </kml:Placemark>
+    <kml:Placemark id="COLLADA_LYON_1ER_00044">
+      <kml:name>LYON_1ER_00044</kml:name>
+      <kml:Model>
+        <kml:altitudeMode>clampToGround</kml:altitudeMode>
+        <kml:Location>
+          <kml:longitude>4.8305747</kml:longitude>
+          <kml:latitude>45.7684047</kml:latitude>
+          <kml:altitude>0.0</kml:altitude>
+        </kml:Location>
+        <kml:Orientation>
+          <kml:heading>1.3198994</kml:heading>
+        </kml:Orientation>
+        <kml:Link>
+          <kml:href>20/LYON_1ER_00044.dae</kml:href>
+        </kml:Link>
+      </kml:Model>
+    </kml:Placemark>
+    <kml:Placemark id="COLLADA_LYON_1ER_00010">
+      <kml:name>LYON_1ER_00010</kml:name>
+      <kml:Model>
+        <kml:altitudeMode>clampToGround</kml:altitudeMode>
+        <kml:Location>
+          <kml:longitude>4.8299844</kml:longitude>
+          <kml:latitude>45.7684469</kml:latitude>
+          <kml:altitude>0.0</kml:altitude>
+        </kml:Location>
+        <kml:Orientation>
+          <kml:heading>1.3201825</kml:heading>
+        </kml:Orientation>
+        <kml:Link>
+          <kml:href>195/LYON_1ER_00010.dae</kml:href>
+        </kml:Link>
+      </kml:Model>
+    </kml:Placemark>
+    <kml:Placemark id="COLLADA_LYON_1ER_00147">
+      <kml:name>LYON_1ER_00147</kml:name>
+      <kml:Model>
+        <kml:altitudeMode>clampToGround</kml:altitudeMode>
+        <kml:Location>
+          <kml:longitude>4.8296901</kml:longitude>
+          <kml:latitude>45.768996</kml:latitude>
+          <kml:altitude>0.0</kml:altitude>
+        </kml:Location>
+        <kml:Orientation>
+          <kml:heading>1.3155701</kml:heading>
+        </kml:Orientation>
+        <kml:Link>
+          <kml:href>399/LYON_1ER_00147.dae</kml:href>
+        </kml:Link>
+      </kml:Model>
+    </kml:Placemark>
+    <kml:Placemark id="COLLADA_LYON_1ER_00011">
+      <kml:name>LYON_1ER_00011</kml:name>
+      <kml:Model>
+        <kml:altitudeMode>clampToGround</kml:altitudeMode>
+        <kml:Location>
+          <kml:longitude>4.8292117</kml:longitude>
+          <kml:latitude>45.7685307</kml:latitude>
+          <kml:altitude>0.0</kml:altitude>
+        </kml:Location>
+        <kml:Orientation>
+          <kml:heading>1.3222721</kml:heading>
+        </kml:Orientation>
+        <kml:Link>
+          <kml:href>218/LYON_1ER_00011.dae</kml:href>
+        </kml:Link>
+      </kml:Model>
+    </kml:Placemark>
+  </kml:Document>
+</kml:kml>

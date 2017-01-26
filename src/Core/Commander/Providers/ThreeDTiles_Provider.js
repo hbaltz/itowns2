@@ -39,6 +39,7 @@ import BoundingBox from 'Scene/BoundingBox'
 
 ThreeDTiles_Provider.prototype.getBox = function(boundingVolume) {
     if(boundingVolume.region) {
+
         let region = boundingVolume.region;
         // TODO: set unitradian
         return new BoundingBox(region[0], region[2], region[1], region[3], region[4], region[5]);
@@ -142,33 +143,38 @@ ThreeDTiles_Provider.prototype.geojsonToMesh = function(geoJson, ellipsoid, para
 };
 
 ThreeDTiles_Provider.prototype.b3dmToMesh = function(result, ellipsoid, parameters, builder/*, transform*/) {
-    var mesh = result.scene.children[0].children[1];    // TODO: multiple geom?
-    //mesh.geometry.scale(1000, 1000, 1000);
+    var mesh = result.scene.children[0].children[0];    // TODO: multiple geom?
+   
+    //mesh.children[0].geometry.scale(10, 10, 10);
 
     var t = (new THREE.Matrix4()).makeBasis(new THREE.Vector3(1,0,0), new THREE.Vector3(0,0,-1), new THREE.Vector3(0,1,0))
 
-    mesh.geometry.applyMatrix(t.transpose());
-    mesh.geometry.applyMatrix(parameters.transform);
-    mesh.geometry.applyMatrix(t.transpose());
-
-    //Use ellipsoid to put data from ellipsoid to cartesian
-    //var posArray = mesh.geometry.attributes.position.array;
-    /*for (var i = 0; i < pos.length; i + 3) {
-
-    }*/
+    mesh.children[0].geometry.applyMatrix(t.transpose());
+    mesh.children[0].geometry.applyMatrix(parameters.transform);
+    mesh.children[0].geometry.applyMatrix(t.transpose());
 
     var box;
-    if(mesh.geometry.boundingBox != null)
+    if(mesh.children[0].geometry.boundingBox != null){
         box = new BoundingBox(mesh.bbox[0], mesh.bbox[2], mesh.bbox[1], mesh.bbox[3], mesh.bbox[4], mesh.bbox[5]);
-    else if(mesh.geometry.boundingSphere) {
-        var bs = mesh.geometry.boundingSphere;
+    }else if(mesh.children[0].geometry.boundingSphere) {
+        var bs = mesh.children[0].geometry.boundingSphere; 
         var c = bs.center;
         var r = bs.radius / 2;
         box = new BoundingBox(c.x - r, c.x + r, c.y - r, c.y + r, c.z - r, c.z + r);
+
+        var geocoordpivot = new  GeoCoordinate(0.0842259305754219, 0.7988448646506582, 1, UNIT.RADIAN);
+        var pivot = ellipsoid.cartographicToCartesian(geocoordpivot);
+
+        mesh.children[0].position.x = pivot.x;
+        mesh.children[0].position.y = pivot.y;
+        mesh.children[0].position.z = pivot.z;
     }
+
+
     var fMesh = new FeatureMesh({bbox: box}, builder);
-    fMesh.setGeometry(mesh.geometry);
-    fMesh.material.uniforms.diffuseColor = mesh.material.uniforms.u_diffuse;
+    fMesh.setGeometry(mesh.children[0].geometry);
+    fMesh.material.uniforms.diffuseColor = mesh.children[0].material.uniforms.u_diffuse;
+
     return fMesh;
 };
 

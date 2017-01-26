@@ -1,0 +1,46 @@
+{
+   "asset":{
+      "version":"0.0"
+   },
+   "refine":"replace",
+   "geometricError":1200,
+   "root":{
+      "boundingVolume":{
+         "region":[
+            0.0840185549600707,
+            0.7987996164630214,
+            0.08441879735479654,
+            0.7989134433461781,
+            -1,
+            301
+         ]
+      },
+      "geometricError":100,
+      "refine":"add",
+      "content":{
+         "url":"data/lyonTileSetOk/LYON_1ER_00045.b3dm"
+      },
+      "children":[
+         {
+            "boundingVolume":{
+               "region":[
+                  0.0842259305754219,
+                  0.7988448646506582,
+                  0.08423848658036658,
+                  0.7988571129412503,
+                  0,
+                  300
+               ]
+            },
+            "geometricError":1200,
+            "content":{
+               "url":"data/lyonTileSetOk/LYON_1ER_00045.b3dm"
+            },
+            "refine":"add",
+            "children":[
+
+            ]
+         }
+      ]
+   }
+}

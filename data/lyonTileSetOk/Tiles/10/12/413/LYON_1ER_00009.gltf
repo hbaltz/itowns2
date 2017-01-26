@@ -1,0 +1,257 @@
+{
+    "accessors": {
+        "accessor_15": {
+            "bufferView": "bufferView_21",
+            "byteOffset": 0,
+            "byteStride": 0,
+            "componentType": 5123,
+            "count": 78,
+            "type": "SCALAR"
+        },
+        "accessor_17": {
+            "bufferView": "bufferView_22",
+            "byteOffset": 0,
+            "byteStride": 12,
+            "componentType": 5126,
+            "count": 46,
+            "max": [
+                7.55535,
+                0,
+                4.16903
+            ],
+            "min": [
+                -3.25539,
+                -8.75903,
+                0
+            ],
+            "type": "VEC3"
+        },
+        "accessor_19": {
+            "bufferView": "bufferView_22",
+            "byteOffset": 552,
+            "byteStride": 8,
+            "componentType": 5126,
+            "count": 46,
+            "max": [
+                0.732283,
+                0.996078
+            ],
+            "min": [
+                0.001961,
+                0.490196
+            ],
+            "type": "VEC2"
+        }
+    },
+    "animations": {},
+    "asset": {
+        "generator": "collada2gltf@d78daf1e7950e6c22fe6bec1d07965e8a302e90d",
+        "premultipliedAlpha": true,
+        "profile": {
+            "api": "WebGL",
+            "version": "1.0.2"
+        },
+        "version": 1
+    },
+    "bufferViews": {
+        "bufferView_21": {
+            "buffer": "LYON_1ER_00009",
+            "byteLength": 156,
+            "byteOffset": 0,
+            "target": 34963
+        },
+        "bufferView_22": {
+            "buffer": "LYON_1ER_00009",
+            "byteLength": 920,
+            "byteOffset": 156,
+            "target": 34962
+        }
+    },
+    "buffers": {
+        "LYON_1ER_00009": {
+            "byteLength": 1076,
+            "type": "arraybuffer",
+            "uri": "data:application/octet-stream;base64,AAABAAIAAAADAAEABAAFAAYABwAGAAgACQAKAAsADAANAAkADAAJAAsACQAOAAoADwAQABEAEgATABEAFAAVABYAFAAWABcAGAAZABoAFQAbABwAFQAcABYAGAAdABkAGQAdAB4AHwAgACEAHQAfAB4AIgAjACQAHQAlAB8AJgAnACMAIwAnACgAAQApAAIAKgArACwAKgAsAC0A48OrQJXWU79/Fm1AbY9ZQH0h6r8AAAAAHy63P9QrNcB/Fm1A48OrQJXWU78AAAAAAAAAAAAAAAAAAAAAR1hQwBAD078AAAAAR1hQwBAD079/Fm1AAAAAAAAAAAAAAAAAAAAAAAAAAAB/Fm1AHy63P9QrNcB/Fm1AaqUmwAiqO8CwaIVA2/u0Pv8kDMGQhytAdsXxQK/Sp8C2SixA48OrQJXWU79/Fm1AEEEpP+Rlp7+waIVAAAAAAAAAAAB/Fm1AR1hQwBAD079/Fm1AaqUmwAiqO8CwaIVAEEEpP+Rlp7+waIVAAAAAAAAAAAB/Fm1AHy63P9QrNcAAAAAAEEEpP+Rlp78AAAAAEEEpP+Rlp7+waIVAHy63P9QrNcB/Fm1A2/u0Pv8kDMGQhytA7gWQv4IPu8AAAAAA2/u0Pv8kDMEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB/Fm1AaqUmwAiqO8CwaIVAaqUmwAiqO8AAAAAA2H47wMiVEsAAAAAAR1hQwBAD079/Fm1AR1hQwBAD078AAAAAdsXxQK/Sp8C2SixAMxV9QFYO4MAAAAAAdsXxQK/Sp8AAAAAAR1hQwBAD079/Fm1AdsXxQK/Sp8C2SixA2/u0Pv8kDMGQhytA2/u0Pv8kDMEAAAAAHy63P9QrNcAAAAAAdsXxQK/Sp8AAAAAA48OrQJXWU78AAAAA48OrQJXWU79/Fm1AdsXxQK/Sp8C2SixAH4QAOzjYEz9Vopw9mngTP8oatT34+vo+WqEIPaKeHj8OMR4+op4eP9rmZj7oSgw/G2NHPnyBAT8OMR4+op4ePwn9/D1D4RM/5NsXP4CcOD8CgQA/YKs4P61LEj/4/n4/7nY7P+atVj9SYS4/qqEhP88wEz9gByY/Ew4TP/j6+j4CgQA/ZKsPP82RBD+Ynx8/Xi4XP/q1DT8TDhM/+Pr6Pra7uz5lHF8/iVzEPgdEcD98D9M+tpxjP5zEyD7U01M/H4QAO/KTKj/H2Gk9U5JBP0piyTyhoCA/SMXLPvj+fj/c2Ng+LstzP0J5Xz0aMnI/KH+3PcODYj8bKsY9tcVpP3gplT34/n4/zNTUPacHcT+y9k8++P5+P4gvhz7wbmE/rrw8PtgPdT94KZU9+P5+P7L2Tz74/n4/trm5PkWfVz8dAbA+1c1NPwr19D2TUgg/ytzcPaYLTT93FB8++P5+P664OD7xuXM/jPYAPr3ERD8="
+        }
+    },
+    "images": {
+        "textureAtlas_357673524_0_img": {
+            "name": "textureAtlas_357673524_0_img",
+            "uri": "textureAtlas_357673524_0.jpeg"
+        }
+    },
+    "materials": {
+        "textureAtlas_357673524_0_eff": {
+            "name": "textureAtlas_357673524_0_mat",
+            "technique": "technique0",
+            "values": {
+                "diffuse": "texture_textureAtlas_357673524_0_img",
+                "emission": [
+                    0,
+                    0,
+                    0,
+                    1
+                ]
+            }
+        }
+    },
+    "meshes": {
+        "geometry0": {
+            "name": "geometry0",
+            "primitives": [
+                {
+                    "attributes": {
+                        "POSITION": "accessor_17",
+                        "TEXCOORD_0": "accessor_19"
+                    },
+                    "indices": "accessor_15",
+                    "material": "textureAtlas_357673524_0_eff",
+                    "mode": 4
+                }
+            ]
+        }
+    },
+    "nodes": {
+        "node_0": {
+            "children": [],
+            "matrix": [
+                1,
+                0,
+                0,
+                0,
+                0,
+                1,
+                0,
+                0,
+                0,
+                0,
+                1,
+                0,
+                0,
+                0,
+                0,
+                1
+            ],
+            "meshes": [
+                "geometry0"
+            ],
+            "name": ""
+        },
+        "node_1": {
+            "children": [
+                "node_0"
+            ],
+            "matrix": [
+                1,
+                0,
+                0,
+                0,
+                0,
+                0,
+                -1,
+                0,
+                0,
+                1,
+                0,
+                0,
+                0,
+                0,
+                0,
+                1
+            ],
+            "name": "Y_UP_Transform"
+        }
+    },
+    "programs": {
+        "program_0": {
+            "attributes": [
+                "a_position",
+                "a_texcoord0"
+            ],
+            "fragmentShader": "LYON_1ER_000090FS",
+            "vertexShader": "LYON_1ER_000090VS"
+        }
+    },
+    "samplers": {
+        "sampler_0": {
+            "magFilter": 9729,
+            "minFilter": 9729,
+            "wrapS": 10497,
+            "wrapT": 10497
+        }
+    },
+    "scene": "defaultScene",
+    "scenes": {
+        "defaultScene": {
+            "nodes": [
+                "node_1"
+            ]
+        }
+    },
+    "shaders": {
+        "LYON_1ER_000090FS": {
+            "type": 35632,
+            "uri": "data:text/plain;base64,cHJlY2lzaW9uIGhpZ2hwIGZsb2F0Owp2YXJ5aW5nIHZlYzIgdl90ZXhjb29yZDA7CnVuaWZvcm0gc2FtcGxlcjJEIHVfZGlmZnVzZTsKdW5pZm9ybSB2ZWM0IHVfZW1pc3Npb247CnZvaWQgbWFpbih2b2lkKSB7CnZlYzQgY29sb3IgPSB2ZWM0KDAuLCAwLiwgMC4sIDAuKTsKdmVjNCBkaWZmdXNlID0gdmVjNCgwLiwgMC4sIDAuLCAxLik7CnZlYzQgZW1pc3Npb247CmRpZmZ1c2UgPSB0ZXh0dXJlMkQodV9kaWZmdXNlLCB2X3RleGNvb3JkMCk7CmVtaXNzaW9uID0gdV9lbWlzc2lvbjsKY29sb3IueHl6ICs9IGRpZmZ1c2UueHl6Owpjb2xvci54eXogKz0gZW1pc3Npb24ueHl6Owpjb2xvciA9IHZlYzQoY29sb3IucmdiICogZGlmZnVzZS5hLCBkaWZmdXNlLmEpOwpnbF9GcmFnQ29sb3IgPSBjb2xvcjsKfQo="
+        },
+        "LYON_1ER_000090VS": {
+            "type": 35633,
+            "uri": "data:text/plain;base64,cHJlY2lzaW9uIGhpZ2hwIGZsb2F0OwphdHRyaWJ1dGUgdmVjMyBhX3Bvc2l0aW9uOwp1bmlmb3JtIG1hdDQgdV9tb2RlbFZpZXdNYXRyaXg7CnVuaWZvcm0gbWF0NCB1X3Byb2plY3Rpb25NYXRyaXg7CmF0dHJpYnV0ZSB2ZWMyIGFfdGV4Y29vcmQwOwp2YXJ5aW5nIHZlYzIgdl90ZXhjb29yZDA7CnZvaWQgbWFpbih2b2lkKSB7CnZlYzQgcG9zID0gdV9tb2RlbFZpZXdNYXRyaXggKiB2ZWM0KGFfcG9zaXRpb24sMS4wKTsKdl90ZXhjb29yZDAgPSBhX3RleGNvb3JkMDsKZ2xfUG9zaXRpb24gPSB1X3Byb2plY3Rpb25NYXRyaXggKiBwb3M7Cn0K"
+        }
+    },
+    "skins": {},
+    "techniques": {
+        "technique0": {
+            "attributes": {
+                "a_position": "position",
+                "a_texcoord0": "texcoord0"
+            },
+            "parameters": {
+                "diffuse": {
+                    "type": 35678
+                },
+                "emission": {
+                    "type": 35666
+                },
+                "modelViewMatrix": {
+                    "semantic": "MODELVIEW",
+                    "type": 35676
+                },
+                "position": {
+                    "semantic": "POSITION",
+                    "type": 35665
+                },
+                "projectionMatrix": {
+                    "semantic": "PROJECTION",
+                    "type": 35676
+                },
+                "texcoord0": {
+                    "semantic": "TEXCOORD_0",
+                    "type": 35664
+                }
+            },
+            "program": "program_0",
+            "states": {
+                "enable": [
+                    2929,
+                    2884
+                ]
+            },
+            "uniforms": {
+                "u_diffuse": "diffuse",
+                "u_emission": "emission",
+                "u_modelViewMatrix": "modelViewMatrix",
+                "u_projectionMatrix": "projectionMatrix"
+            }
+        }
+    },
+    "textures": {
+        "texture_textureAtlas_357673524_0_img": {
+            "format": 6408,
+            "internalFormat": 6408,
+            "sampler": "sampler_0",
+            "source": "textureAtlas_357673524_0_img",
+            "target": 3553,
+            "type": 5121
+        }
+    }
+}

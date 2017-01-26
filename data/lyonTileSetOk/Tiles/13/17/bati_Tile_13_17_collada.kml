@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<kml:kml xmlns:kml="http://www.opengis.net/kml/2.2">
+  <kml:Document>
+    <kml:name>bati_Tile_13_17_collada</kml:name>
+    <kml:open>false</kml:open>
+    <kml:Placemark>
+      <kml:name>Tile border</kml:name>
+      <kml:LineString>
+        <kml:tessellate>true</kml:tessellate>
+        <kml:coordinates>4.835782881818182,45.773296529999996 4.8373629454545455,45.773296529999996 4.8373629454545455,45.774353239999996 4.835782881818182,45.774353239999996 4.835782881818182,45.773296529999996</kml:coordinates>
+      </kml:LineString>
+    </kml:Placemark>
+    <kml:Placemark id="COLLADA_LYON_1ER_00031">
+      <kml:name>LYON_1ER_00031</kml:name>
+      <kml:Model>
+        <kml:altitudeMode>clampToGround</kml:altitudeMode>
+        <kml:Location>
+          <kml:longitude>4.8359401</kml:longitude>
+          <kml:latitude>45.7735915</kml:latitude>
+          <kml:altitude>0.0</kml:altitude>
+        </kml:Location>
+        <kml:Orientation>
+          <kml:heading>1.3101204</kml:heading>
+        </kml:Orientation>
+        <kml:Link>
+          <kml:href>137/LYON_1ER_00031.dae</kml:href>
+        </kml:Link>
+      </kml:Model>
+    </kml:Placemark>
+    <kml:Placemark id="COLLADA_LYON_1ER_00068">
+      <kml:name>LYON_1ER_00068</kml:name>
+      <kml:Model>
+        <kml:altitudeMode>clampToGround</kml:altitudeMode>
+        <kml:Location>
+          <kml:longitude>4.8376706</kml:longitude>
+          <kml:latitude>45.7738615</kml:latitude>
+          <kml:altitude>0.0</kml:altitude>
+        </kml:Location>
+        <kml:Orientation>
+          <kml:heading>1.3082612</kml:heading>
+        </kml:Orientation>
+        <kml:Link>
+          <kml:href>72/LYON_1ER_00068.dae</kml:href>
+        </kml:Link>
+      </kml:Model>
+    </kml:Placemark>
+    <kml:Placemark id="COLLADA_LYON_1ER_00025">
+      <kml:name>LYON_1ER_00025</kml:name>
+      <kml:Model>
+        <kml:altitudeMode>clampToGround</kml:altitudeMode>
+        <kml:Location>
+          <kml:longitude>4.8360172</kml:longitude>
+          <kml:latitude>45.7733299</kml:latitude>
+          <kml:altitude>0.0</kml:altitude>
+        </kml:Location>
+        <kml:Orientation>
+          <kml:heading>1.3169575</kml:heading>
+        </kml:Orientation>
+        <kml:Link>
+          <kml:href>155/LYON_1ER_00025.dae</kml:href>
+        </kml:Link>
+      </kml:Model>
+    </kml:Placemark>
+  </kml:Document>
+</kml:kml>
