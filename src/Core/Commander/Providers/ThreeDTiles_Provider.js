@@ -145,7 +145,7 @@ ThreeDTiles_Provider.prototype.geojsonToMesh = function(geoJson, ellipsoid, para
 ThreeDTiles_Provider.prototype.b3dmToMesh = function(result, ellipsoid, parameters, builder/*, transform*/) {
     var mesh = result.scene.children[0].children[0];    // TODO: multiple geom?
 
-    var child = mesh.children[1];
+    var child = mesh.children[0];
    
     //mesh.children[0].geometry.scale(1000, 1000, 1000);
 
@@ -174,7 +174,6 @@ ThreeDTiles_Provider.prototype.b3dmToMesh = function(result, ellipsoid, paramete
 
     var geocoordpivot = new  GeoCoordinate(0.0842259305754219, 0.7988448646506582, 1, UNIT.RADIAN);
     var pivot = ellipsoid.cartographicToCartesian(geocoordpivot);
-
 
     var fMesh = new FeatureMesh({bbox: box}, builder);
     fMesh.setGeometry(child.geometry);
